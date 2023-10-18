@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1082516710143",
+    "project_id": "opsc7312-a53a4",
+    "storage_bucket": "opsc7312-a53a4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082516710143:android:a8bc0eeb6dade325c162ca",
+        "android_client_info": {
+          "package_name": "com.example.openedmaps"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuK_Vr4vdBI5oRif8Ze_QvdhRKnEG5cOY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082516710143:android:940d355056acb229c162ca",
+        "android_client_info": {
+          "package_name": "com.example.opsctasktwo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuK_Vr4vdBI5oRif8Ze_QvdhRKnEG5cOY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

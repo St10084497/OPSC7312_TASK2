@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">OpenedMaps</string>
+    <string name="login">Login\n</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="about_us">Welcome to Ornithology Go!, your trusted companion for birdwatching and nature exploration. At Ornithology Go!, we\'re passionate about birds and their natural habitats. Our mission is to make birdwatching an accessible and enriching experience for everyone. Whether you\'re a seasoned birder or a beginner, our app is designed to connect you with the fascinating world of avian life. Discover, identify, and learn more about the birds you encounter. Record your observations, contribute to conservation efforts, and connect with a global community of birdwatchers. Join us in celebrating the beauty of our feathered friends and exploring the wonders of nature. Thank you for being a part of the Ornithology Go! community. Happy birdwatching!</string>
+
+
+</resources>

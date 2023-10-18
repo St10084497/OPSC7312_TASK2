@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.OpenedMaps" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#000000</item> <!-- Black -->
+        <item name="colorPrimaryVariant">#444444</item> <!-- Darkish Gray -->
+        <item name="colorOnPrimary">#FFFFFF</item> <!-- White -->
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#FFFFFF</item> <!-- White -->
+        <item name="colorSecondaryVariant">#444444</item> <!-- Darkish Gray -->
+        <item name="colorOnSecondary">#000000</item> <!-- Black -->
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Navigation bar color. -->
+        <item name="android:navigationBarColor">?attr/colorPrimaryVariant</item><!-- Customize your theme here. -->
+    </style>
+</resources>

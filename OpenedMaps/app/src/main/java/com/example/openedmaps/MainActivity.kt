@@ -100,6 +100,14 @@ class MainActivity : AppCompatActivity(), IMyLocationProvider, MapListener, GpsS
         super.onCreate(savedInstanceState)
         //nav back
 
+        val waitingForLocationDialog = AlertDialog.Builder(this)
+        waitingForLocationDialog.setTitle("Wait for Live Location")
+        waitingForLocationDialog.setMessage("Please wait while we load your live location; this process may take a moment. If your location doesn't load, you can press the back button and reopen the map.")
+        waitingForLocationDialog.setPositiveButton("OK") { dialog, _ ->
+            dialog.dismiss()
+        }
+        val dialog = waitingForLocationDialog.create()
+        dialog.show()
 
 
         //init binding
@@ -460,12 +468,49 @@ class MainActivity : AppCompatActivity(), IMyLocationProvider, MapListener, GpsS
     }
     private fun resetMapToInitialState() {
         // Set the initial zoom level
+        Configuration.getInstance().load(this,
+            PreferenceManager.getDefaultSharedPreferences(this))
+        //mapView = binding.mapView
+        mapController = mapView.controller
+        mapView.setMultiTouchControls(true)
+
+        //init the start point
+        val startPoint = GeoPoint(-29.8587, 31.0218)
+        mapController.setCenter(startPoint)
+        mapController.setZoom(12.0)
+
+        //create marker for the start point (ic_location)
+        val icLocationMarker = Marker(mapView)
+        icLocationMarker.position = startPoint
+        icLocationMarker.icon = ResourcesCompat.getDrawable(resources, R.drawable.ic_location, null)
+
+        //add a click listener to the ic_location marker
+        icLocationMarker.setOnMarkerClickListener{marker , mapView ->
+            val latitude = marker.position.latitude
+            val longitude = marker.position.longitude
+
+            val dialog = Dialog(this@MainActivity)
+            dialog.setContentView(R.layout.custom)
+
+            val latitudeTextView = dialog.findViewById<TextView>(R.id.latitudeTextView)
+            val longitudeTextView = dialog.findViewById<TextView>(R.id.longitudeTextView)
+
+            latitudeTextView.text = "Latitude: $latitude"
+            longitudeTextView.text = "Longitude: $longitude"
+
+            dialog.show()
+
+            true //Return true to indicate that the event is consumed
+        }
+
+        // Add the ic_location marker to the mapView
+        mapView.overlays.add(icLocationMarker)
         mapController.setZoom(6.0)
 
         // Set the map center to the initial point (change these coordinates as needed)
         val initialPoint = GeoPoint(-29.8587, 31.0218)
         mapController.setCenter(initialPoint)
-        mapView.invalidate()
+
 
     }
 

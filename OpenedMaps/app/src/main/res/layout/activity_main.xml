@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <!-- MapView -->
@@ -21,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:background="@color/white">
+        android:background="@android:color/transparent">
 
         <!-- View Hotspots Button -->
         <Button
@@ -49,10 +50,10 @@
         android:id="@+id/btnReturn"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
+        android:layout_above="@+id/buttonContainer"
         android:layout_gravity="center"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:background="@drawable/bottom_background"
         android:drawableTop="@drawable/back"
-        android:onClick="backNav"
-        android:layout_above="@+id/buttonContainer" />
+        android:onClick="backNav" />
 </RelativeLayout>

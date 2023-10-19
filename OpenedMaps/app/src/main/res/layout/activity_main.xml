@@ -7,6 +7,44 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- MapView -->
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonContainer" />
+
+    <!-- Button Container -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <!-- View Hotspots Button -->
+        <Button
+            android:id="@+id/viewHotspotsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="View Hotspots"
+            android:layout_margin="10dp"
+            android:background="@drawable/bottom_background" />
+
+        <!-- Reset Map Button -->
+        <Button
+            android:id="@+id/resetMapButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reset Map"
+            android:layout_margin="10dp"
+            android:background="@drawable/bottom_background" />
+    </LinearLayout>
+
+    <!-- Back Button -->
     <Button
         android:id="@+id/btnReturn"
         android:layout_width="wrap_content"
@@ -15,51 +53,6 @@
         android:layout_marginLeft="10dp"
         android:background="@drawable/bottom_background"
         android:drawableTop="@drawable/back"
-        android:onClick="backNav" />
-
-
-    <org.osmdroid.views.MapView
-        android:id="@+id/mapView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="vertical"
-        android:background="@color/white"
-        tools:ignore="ExtraText">
-
-
-
-        <Button
-            android:id="@+id/viewHotspotsButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="View Hotspots"
-            android:layout_margin="10dp"
-            android:layout_gravity="center"
-            android:background="@drawable/bottom_background"/>
-
-
-        <Button
-            android:id="@+id/resetMapButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Reset Map"
-            android:layout_margin="10dp"
-            android:layout_gravity="center"
-            android:background="@drawable/bottom_background"
-
-           />
-
-
-
-
-
-
-    </LinearLayout>
+        android:onClick="backNav"
+        android:layout_above="@+id/buttonContainer" />
 </RelativeLayout>
